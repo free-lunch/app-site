@@ -1,50 +1,115 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ODF Apps</title>
+  <title>ODF Labs</title>
+  <meta name="description" content="ODF Labs is an AI-native indie app studio in Seoul. We design, build, and operate small mobile apps for a global audience with Claude-powered agents.">
+  <meta property="og:title" content="ODF Labs">
+  <meta property="og:description" content="AI-native indie app studio. Small apps, shipped fast, for a global audience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏭</text></svg>">
   <style>
+    :root {
+      --bg: #fafafa; --card: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --line: #e5e5ea;
+      --accent: #0a84ff; --chip: #f2f2f7; --shadow: 0 1px 3px rgba(0,0,0,.06);
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111113; --card: #1c1c1f; --fg: #f2f2f5; --muted: #9a9aa3; --line: #2c2c31; --accent: #4da3ff; --chip: #26262b; --shadow: none; }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #333; line-height: 1.6; padding: 60px 20px; max-width: 600px; margin: 0 auto; background: #fafafa; }
-    h1 { font-size: 28px; margin-bottom: 8px; }
-    .subtitle { font-size: 15px; color: #888; margin-bottom: 40px; }
-    .app-list { list-style: none; }
-    .app-list li { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-    .app-list a { text-decoration: none; color: #333; font-weight: 600; }
-    .app-list .links { margin-top: 8px; font-size: 14px; }
-    .app-list .links a { color: #666; font-weight: 400; margin-right: 16px; }
-    .app-list .links a:hover { color: #007AFF; }
-    footer { margin-top: 48px; font-size: 13px; color: #aaa; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; color: var(--fg); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; }
+    header { margin-bottom: 44px; }
+    .brand { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 14px; }
+    .lede { font-size: 17px; color: var(--muted); max-width: 56ch; }
+    h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 44px 0 14px; }
+    .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .how div { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; box-shadow: var(--shadow); }
+    .how strong { display: block; font-size: 15px; margin-bottom: 4px; }
+    .how p { font-size: 14px; color: var(--muted); }
+    .apps { list-style: none; display: grid; gap: 12px; }
+    .apps li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); display: flex; gap: 16px; align-items: flex-start; }
+    .icon { flex: 0 0 44px; height: 44px; border-radius: 11px; background: var(--chip); display: grid; place-items: center; font-size: 22px; }
+    .apps h3 { font-size: 16px; font-weight: 600; }
+    .apps h3 span { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 6px; }
+    .apps p { font-size: 14px; color: var(--muted); margin: 2px 0 8px; }
+    .links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
+    .links a { color: var(--accent); text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    .links .soon { color: var(--muted); }
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
-  <h1>ODF Apps</h1>
-  <p class="subtitle">by ODF</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">ODF Labs · Seoul</div>
+      <h1>Small apps, shipped fast,<br>built with AI agents.</h1>
+      <p class="lede">ODF Labs is an AI-native indie app studio. One engineer and a team of Claude-powered agents design, build, release, and monitor mobile apps for a global audience.</p>
+    </header>
 
-  <ul class="app-list">
-    <li>
-      <a href="#">식단플래너</a>
-      <div class="links">
-        <a href="mealnote/">개인정보처리방침</a>
-      </div>
-    </li>
-    <li>
-      <a href="#">Bloom</a>
-      <div class="links">
-        <a href="bloom/">개인정보처리방침</a>
-      </div>
-    </li>
-    <li>
-      <a href="#">Today Card : Daily Insights</a>
-      <div class="links">
-        <a href="daily-insight/">개인정보처리방침</a>
-      </div>
-    </li>
-  </ul>
+    <h2>How we build</h2>
+    <div class="how">
+      <div><strong>Idea → app in days</strong><p>Specs, wireframes, and code are drafted with Claude and reviewed by a human before every release.</p></div>
+      <div><strong>Agents run operations</strong><p>Store metrics, ad revenue, analytics events, and release checks are collected daily by Claude Code agents.</p></div>
+      <div><strong>Ship, measure, repeat</strong><p>Many small experiments. Keep what users love, learn from the rest.</p></div>
+    </div>
 
-  <footer>
-    <p>문의: <a href="mailto:odf.labs@gmail.com">odf.labs@gmail.com</a></p>
-  </footer>
+    <h2>Apps</h2>
+    <ul class="apps">
+      <li>
+        <div class="icon">🍽️</div>
+        <div>
+          <h3>Meal Planner <span>식단플래너</span></h3>
+          <p>Plan meals for the week or month ahead, then record what you actually ate.</p>
+          <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.odflabs.mealnote">Google Play</a>
+            <a href="mealnote/">Privacy Policy</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="icon">🌸</div>
+        <div>
+          <h3>Bloom</h3>
+          <p>Period calendar and weight tracker in one. See how your cycle and weight move together.</p>
+          <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.bloom.period">Google Play</a>
+            <a href="bloom/">Privacy Policy</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="icon">🃏</div>
+        <div>
+          <h3>Today Card <span>Daily Insights</span></h3>
+          <p>One card a day. A short daily reading for work, love, and everything else.</p>
+          <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.todaycard.app">Google Play</a>
+            <a href="daily-insight/">Privacy Policy</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="icon">🧩</div>
+        <div>
+          <h3>Order Rush</h3>
+          <p>A fast casual puzzle game: put things in order before the clock runs out. HTML5, playable in the browser.</p>
+          <div class="links"><span class="soon">Coming soon</span></div>
+        </div>
+      </li>
+    </ul>
+
+    <footer>
+      <span>© 2026 ODF Labs</span>
+      <a href="mailto:admin@odflabs.com">admin@odflabs.com</a>
+      <a href="app-ads.txt">app-ads.txt</a>
+    </footer>
+  </div>
 </body>
 </html>
