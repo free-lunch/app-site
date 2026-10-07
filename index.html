@@ -8,6 +8,26 @@
   <meta property="og:title" content="ODF Labs">
   <meta property="og:description" content="AI-native indie app studio. Small apps, shipped fast, for a global audience.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://odflabs.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ODF Labs",
+    "alternateName": ["오디에프", "ODF"],
+    "legalName": "오디에프 (ODF)",
+    "url": "https://odflabs.com/",
+    "email": "admin@odflabs.com",
+    "foundingDate": "2026-02-12",
+    "foundingLocation": { "@type": "Place", "name": "Seoul, South Korea" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Seoul", "addressCountry": "KR" },
+    "founder": [
+      { "@type": "Person", "name": "Sumi Baek", "jobTitle": "Founder & CEO" },
+      { "@type": "Person", "name": "Jay Jang", "jobTitle": "Co-founder, Engineering" }
+    ],
+    "sameAs": ["https://play.google.com/store/apps/developer?id=odf.labs"]
+  }
+  </script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏭</text></svg>">
   <style>
     :root {
@@ -41,6 +61,16 @@
     .links a { color: var(--accent); text-decoration: none; }
     .links a:hover { text-decoration: underline; }
     .links .soon { color: var(--muted); }
+    .about { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
+    .about p { font-size: 15px; color: var(--muted); margin-bottom: 14px; }
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px 20px; font-size: 14px; }
+    .facts dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .facts dd { margin: 2px 0 0; }
+    .facts a { color: var(--accent); text-decoration: none; }
+    .facts a:hover { text-decoration: underline; }
+    .team { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .team li { font-size: 15px; }
+    .team span { display: block; font-size: 13px; color: var(--muted); }
     footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
     footer a { color: var(--muted); }
   </style>
@@ -61,6 +91,7 @@
     </div>
 
     <h2>Apps</h2>
+    <p class="lede" style="font-size:14px;margin:-6px 0 14px">All apps are published under our Google Play developer account <a href="https://play.google.com/store/apps/developer?id=odf.labs" style="color:var(--accent);text-decoration:none">odf.labs</a>.</p>
     <ul class="apps">
       <li>
         <div class="icon">🍽️</div>
@@ -105,8 +136,26 @@
       </li>
     </ul>
 
+    <h2>About</h2>
+    <div class="about">
+      <p>ODF stands for One Dollar Factory: a studio built to test the idea that one engineer with AI agents can ship and run many small, useful apps. ODF Labs is a registered sole proprietorship (개인사업자 오디에프) based in Seoul, South Korea.</p>
+      <dl class="facts">
+        <div><dt>Legal name</dt><dd>오디에프 (ODF)</dd></div>
+        <div><dt>Founded</dt><dd>February 2026</dd></div>
+        <div><dt>Based in</dt><dd>Seoul, South Korea</dd></div>
+        <div><dt>Developer account</dt><dd><a href="https://play.google.com/store/apps/developer?id=odf.labs">Google Play · odf.labs</a></dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:admin@odflabs.com">admin@odflabs.com</a></dd></div>
+      </dl>
+    </div>
+
+    <h2>Team</h2>
+    <ul class="team">
+      <li>Sumi Baek<span>Founder &amp; CEO</span></li>
+      <li>Jay Jang<span>Co-founder · Engineering</span></li>
+    </ul>
+
     <footer>
-      <span>© 2026 ODF Labs</span>
+      <span>© 2026 오디에프 (ODF Labs)</span>
       <a href="mailto:admin@odflabs.com">admin@odflabs.com</a>
       <a href="app-ads.txt">app-ads.txt</a>
     </footer>
